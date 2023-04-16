@@ -1,20 +1,11 @@
 ﻿@namespace BitCareers.Web
 @inherits AppComponentBase
 
-<header class="header">
-    <div class="header-contact">
-        @if (_isUserAuthenticated)
-        {
-            <BitIconButton Class="header-menu" IconName=BitIconName.CollapseMenu OnClick=ToggleMenu />
-        }
-        <a class="logo-lnk" href="/"></a>
-    </div>
-    <div class="header-contact">
-        <BitLink Class="header-item--privacy" Href="/privacy" Target="_self">@Localizer[nameof(AppStrings.Privacy)]</BitLink>
-        @if (!_isUserAuthenticated)
-        {
-            <BitActionButton Class="header-item" IconName="BitIconName.AddFriend" Href="/sign-up" Target="_self">@Localizer[nameof(AppStrings.SignUp)]</BitActionButton>
-            <BitActionButton Class="header-item" IconName="BitIconName.Signin" Href="/sign-in" Target="_self">@Localizer[nameof(AppStrings.SignIn)]</BitActionButton>
-        }
+<header class="header-container">
+    <img src="/images/shared/bit-icon.svg" class="header-bit-icon">
+    <div class="header-items-container">
+        <div class="header-item">هم‌تیمی‌ها</div>
+        <div class="header-item margin-around">فرصت‌های همکاری</div>
+        <div class="header-item blue-font-color">صفحه اصلی</div>
     </div>
 </header>

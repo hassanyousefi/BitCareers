@@ -17,4 +17,8 @@
     public static goBack(): void {
         window.history.back();
     }
+
+    public static backToTop() {
+        window.scrollTo({ top: 0 });
+    }
 }

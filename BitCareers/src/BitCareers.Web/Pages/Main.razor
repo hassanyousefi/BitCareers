@@ -1,0 +1,303 @@
+﻿@page "/"
+@inherits AppComponentBase
+
+<section class="hero-section-container">
+    <div class="person-pic"></div>
+    <div class="hero-section-content">
+        <div class="hero-section-title">مهم نیست کجای دنیایی، تو مسیر رشد کنارمون باش</div>
+        <div class="hero-section-description">
+            ما تو
+            <img src="/images/shared/bit-icon.svg" class="hero-section-bit-icon" />
+            از قسمت‌های مختلف دنیا دور هم جمع شدیم. درسته از هم دوریم ولی کنار هم برای پیشرفتمون تلاش می‌کنیم.
+        </div>
+        <button class="careers-button btn-pad">فرصت‌های همکاری</button>
+    </div>
+</section>
+
+<section class="about-us-section-container">
+    <div class="section-title">ما رو بشناس</div>
+    <div class="about-us-section-content">
+        <div class="about-us-section-img-container">
+            <div class="about-us-section-img"></div>
+            <img src="/images/ui-effect/ui-effect-img-01.svg" class="ui-effect-1" />
+            <img src="/images/ui-effect/ui-effect-img-02.svg" class="ui-effect-2" />
+            <img src="/images/ui-effect/ui-effect-img-03.svg" class="ui-effect-3" />
+        </div>
+        <div class="about-us-section-info">
+            <div class="about-us-section-description">ما جمعی از افراد حرفه‌ای و کاربلدیم که در تولید و رشد نرم‌افزارهای مختلف با هم همکاری می‌کنیم. اینجا همواره برای پیشرفت خودمون تلاش می‌کنیم و کار تیمی و حال خوب هم‌تیمی هامون از مهمترین ارزش‌هامونه.</div>
+            <button class="about-us-section-btn btn-pad">شناخت بیشتر</button>
+        </div>
+        <img src="/images/ui-effect/ui-effect-img-04.svg" class="ui-effect-4" />
+    </div>
+</section>
+
+<section class="careers-section-container">
+    <div class="section-title">فرصت‌های همکاری</div>
+    <div class="careers-section-content">
+        @for (var i = 0; i < 7; i++)
+        {
+            <div class="careers-box">
+                <button class="careers-button btn-pad">ارسال رزومه</button>
+                <div class="careers-box-content">
+                    <div class="careers-box-title">(Product Manager) مدیر پروژه</div>
+                    <img src="/images/main-page/product-manager-img.svg" class="careers-box-img" />
+                </div>
+            </div>
+        }
+        <div class="more-careers">
+            <div class="more-careers-title">.مهارتت جز موارد بالا نیست؟ مشکلی نیست، اینجا از خودت برامون بگو</div>
+            <button class="arrow-icon-btn send-resume-btn">ارسال رزومه</button>
+            <img src="/images/ui-effect/ui-effect-bell.svg" class="ui-effect-bell" />
+        </div>
+        <img src="/images/ui-effect/rocket-img.svg" class="ui-effect-rocket" />
+    </div>
+</section>
+
+<section class="feedback-section">
+    <BitCarousel ShowDots="false" AnimationDuration="2" ShowNextPrev="false" Class="bit-carousel" @ref="carousel">
+        <BitCarouselItem>
+            <div class="feedback-container">
+                <div class="product-designer-info-container">
+                    <div class="product-designer-info">
+                        <div class="designer-avatar"></div>
+                        <div class="designer-name">زهرا ابراهیمی</div>
+                        <div class="designer-post-text">Product Designer</div>
+                    </div>
+                </div>
+                <div class="feedback-content">
+                    <div class="section-title">دیدگاه افراد تیم</div>
+                    <div class="feedback-description">
+                        ما تو bit خیلی راحت می‌تونیم نظرات و ایده‌هامون رو بگیم و فضای خوبی برای رشد و یادگیری وجود داره، اینجا همه به هم کمک می‌کنیم و راه‌حل مناسبی برای چالش‌ها پیدا می‌کنیم.
+                        <img src="/images/main-page/quote-down-icon.svg" class="quote-down" />
+                        <img src="/images/main-page/quote-up-icon.svg" class="quote-up" />
+                        <img src="/images/ui-effect/ui-effect-img-05.svg" class="ui-effect-5" />
+                    </div>
+                    <div class="slide-btns">
+                        <button class="slides-left-arrow"></button>
+                        <button class="slides-right-arrow" @onclick=GoNext></button>
+                    </div>
+                </div>
+                <div class="team-members-img"></div>
+            </div>
+        </BitCarouselItem>
+        <BitCarouselItem>
+            <div class="second-slide">second slide</div>
+        </BitCarouselItem>
+    </BitCarousel>
+</section>
+
+<section class="flow-section-container">
+    <div class="section-title">دیدگاه افراد تیم</div>
+    <div class="flow-section-content">
+        <div class="flow-step">
+            <img src="/images/main-page/collaboration-avatar.svg" />
+            <div class="step-name">شروع همکاری</div>
+        </div>
+        <div class="connection-line"></div>
+        <div class="flow-step">
+            <img src="/images/main-page/meeting-icon.svg" />
+            <div class="step-name">آشنایی با تیم</div>
+        </div>
+        <div class="connection-line"></div>
+        <div class="flow-step">
+            <img src="/images/main-page/interview-avatar.svg" />
+            <div class="step-name">مصاحبه</div>
+        </div>
+        <div class="connection-line"></div>
+        <div class="flow-step">
+            <img src="/images/main-page/resume-avatar.svg" />
+            <div class="step-name">ارسال رزومه</div>
+        </div>
+    </div>
+</section>
+
+<section class="why-bit-section-container">
+    <div class="section-title">چرا bit؟</div>
+    <div class="why-bit-section-content">
+        <div class="why-bit-item">
+            <span>ساعت ‌کاری منعطف</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>تکنولوژی بروز</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>هم‌تیمی‌‌های خفن</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>تیم صمیمی و پویا</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>کار Open Source</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>تجربه دورکاری</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>کار حرفه‌ای و باکیفیت</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>استفاده از Cloud</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+        <div class="why-bit-item">
+            <span>فضای رشد فردی</span>
+            <img src="/images/main-page/tick-icon-blue.svg" />
+        </div>
+    </div>
+</section>
+
+<section class="suggestions-section-container">
+    <div class="section-title">مقاله‌ و ویدئو</div>
+    <div class="suggestions-section-content">
+
+        <div class="suggestion-items-container">
+            <header class="suggestion-items-container-header">
+                <button class="arrow-icon-btn see-all-btn">مشاهده همه</button>
+                <span class="suggestion-items-container-title">مقاله‌ها</span>
+            </header>
+            <div class="suggestion-items">
+                <div class="intro-box">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-box intro-box-space">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-box">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestion-items-container videos-section">
+            <header class="suggestion-items-container-header">
+                <button class="arrow-icon-btn see-all-btn">مشاهده همه</button>
+                <span class="suggestion-items-container-title">ویدئوها</span>
+            </header>
+            <div class="suggestion-items">
+                <div class="intro-box">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-box intro-box-space">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-box">
+                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
+                    <div class="intro-box-content">
+                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
+                        <div class="author-info">
+                            <div class="author-name">سارا نیازی</div>
+                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
+                        </div>
+                        <div class="intro-box-times">
+                            <div class="intro-box-times-item">
+                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
+                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
+                            </div>
+                            <div class="intro-box-times-item">
+                                <span class="time-text"> ۱۰ دقیقه</span>
+                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

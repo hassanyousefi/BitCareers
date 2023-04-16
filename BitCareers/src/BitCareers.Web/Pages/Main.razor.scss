@@ -1,0 +1,578 @@
+@import '../Styles/abstracts/_colors.scss';
+
+/*--- start general classes ---*/
+section {
+    margin-bottom: 88px;
+    user-select: none;
+
+    &:nth-child(odd) {
+        background-color: $Blue2;
+    }
+
+    &:nth-child(even) {
+        background-color: $PureWhite;
+    }
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: $Black1;
+    padding-bottom: 12px;
+    border-bottom: 3px solid $Orange1;
+    margin: 0 auto;
+    direction: rtl;
+    text-align: center;
+}
+
+.btn-pad {
+    padding: 8px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.arrow-icon-btn {
+    color: $Blue3;
+    font-weight: 600;
+    background: url(/images/main-page/left-arrow-blue.svg) no-repeat 0px;
+    text-align: right;
+}
+
+.careers-button {
+    background-color: $Primary;
+    color: $PureWhite;
+    height: 48px;
+
+    &:hover {
+        background-color: $Blue4;
+    }
+}
+/*--- end general classes ---*/
+
+
+.hero-section-container {
+    display: flex;
+    padding: 56px 140px 0 100px;
+    background-color: $Blue1 !important;
+    align-items: flex-end;
+
+    .person-pic {
+        background: url(/images/main-page/person-pic.svg) no-repeat bottom;
+        background-size: contain;
+        margin-right: 30px;
+        width: 100%;
+        height: 456px;
+        flex: 3;
+    }
+
+    .hero-section-content {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 78px 0;
+
+        .hero-section-title {
+            color: $Black1;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            line-height: 56px;
+            direction: rtl;
+        }
+
+        .hero-section-description {
+            margin-bottom: 40px;
+            color: $Gray2;
+            font-size: 24px;
+            line-height: 48px;
+            direction: rtl;
+        }
+
+        .hero-section-bit-icon {
+            height: 24px;
+            padding: 0 2px;
+        }
+    }
+}
+
+
+.about-us-section-container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 40px 140px 80px 140px;
+
+    .about-us-section-content {
+        margin-top: 73px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .about-us-section-img-container {
+        margin-right: 50px;
+        position: relative;
+        height: fit-content;
+        flex: 1;
+
+        .about-us-section-img {
+            background: url(/images/main-page/team-work-pic.svg) no-repeat center;
+            background-size: contain;
+            height: 248px;
+        }
+
+        .ui-effect-1 {
+            position: absolute;
+            top: -33px;
+            left: -28px;
+        }
+
+        .ui-effect-2 {
+            position: absolute;
+            bottom: -28px;
+            right: -28px;
+        }
+
+        .ui-effect-3 {
+            position: absolute;
+            left: 72px;
+            top: -53px;
+        }
+    }
+
+    .about-us-section-info {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex: 3;
+
+        .about-us-section-description {
+            font-size: 20px;
+            direction: rtl;
+            color: $Black1;
+            margin-bottom: 32px;
+            margin-top: 24px;
+        }
+
+        .about-us-section-btn {
+            color: $Primary;
+            border: 1px solid $Primary;
+            background-color: $PureWhite;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $PureWhite;
+                background-color: $Primary;
+            }
+        }
+    }
+
+    .ui-effect-4 {
+        position: absolute;
+        right: -63px;
+        top: -80px;
+    }
+}
+
+.careers-section-container {
+    padding: 40px 20px 90px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .careers-section-content {
+        max-width: 970px;
+        position: relative;
+        margin-top: 64px;
+    }
+
+    .careers-box {
+        width: 100%;
+        min-height: 160px;
+        background: $PureWhite;
+        border: 1px solid $Gray3;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 56px;
+
+        &:last-child {
+            margin-bottom: 32px !important;
+        }
+
+        .careers-box-content {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+
+        .careers-box-title {
+            margin-right: 48px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $Gray1;
+        }
+
+        .careers-box-img {
+            width: 148px;
+        }
+    }
+
+    .more-careers {
+        width: 100%;
+        border: 2px solid $Blue1;
+        min-height: 186px;
+        border-radius: 12px;
+        padding: 48px 200px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .more-careers-title {
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .send-resume-btn {
+            background-size: 28px;
+            width: 121px;
+        }
+
+        .ui-effect-bell {
+            position: absolute;
+            top: 34px;
+            right: 73px;
+        }
+    }
+
+    .ui-effect-rocket {
+        position: absolute;
+        bottom: -90px;
+        left: 68px;
+    }
+}
+
+
+.feedback-section {
+    padding-bottom: 40px;
+
+    ::deep .bit-carousel {
+        height: 720px;
+    }
+
+    .feedback-container {
+        display: flex;
+        flex-flow: row nowrap;
+
+
+        .product-designer-info-container {
+            flex: 1;
+            max-width: 373px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-left: 80px;
+        }
+
+        .product-designer-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .designer-avatar {
+            background: url(/images/main-page/zahra-ebrahimi-avatar.svg) no-repeat center;
+            background-size: contain;
+            height: 260px;
+            width: 100%;
+        }
+
+        .designer-name {
+            color: $Gray1;
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 13px;
+            line-height: 48px;
+            direction: rtl;
+        }
+
+        .designer-post-text {
+            color: $Gray4;
+            font-size: 20px;
+            margin-top: 6px;
+            line-height: 40px;
+        }
+
+        .feedback-content {
+            flex: 3;
+            padding: 40px 86px 0 56px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .feedback-description {
+            margin-top: 189px;
+            font-size: 20px;
+            color: $Gray1;
+            line-height: 40px;
+            text-align: center;
+            direction: rtl;
+            position: relative;
+
+            .quote-down {
+                position: absolute;
+                top: -54px;
+                right: 0;
+            }
+
+            .quote-up {
+                position: absolute;
+                bottom: -54px;
+                left: 0;
+            }
+
+            .ui-effect-5 {
+                position: absolute;
+                top: -70px;
+                left: -50px;
+            }
+        }
+
+        .slide-btns {
+            display: flex;
+            width: 120px;
+            justify-content: space-between;
+            margin-top: 120px;
+        }
+
+        .slides-left-arrow {
+            background: url(/images/main-page/slides-left-arrow-empty.svg) no-repeat center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .slides-right-arrow {
+            background: url(/images/main-page/slides-right-arrow-filled.svg) no-repeat center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .team-members-img {
+            flex: 1;
+            background: url(/images/main-page/team-members-avatars.svg) no-repeat right;
+            background-size: contain;
+            height: 680px;
+        }
+    }
+
+    .second-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: $Blue3;
+    }
+}
+
+
+.flow-section-container {
+    padding: 40px 50px 127px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .flow-section-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+    }
+
+    .flow-step {
+        max-width: 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step-name {
+        font-weight: 500;
+        color: $Black1;
+        margin-top: 8px;
+    }
+
+    .connection-line {
+        margin-top: 8px;
+        max-width: 130px;
+        width: 100%;
+        border-bottom: 2px dashed $Blue5;
+    }
+}
+
+
+.why-bit-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 50px 80px;
+
+    .why-bit-section-content {
+        margin-top: 65px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 21px 9vw;
+    }
+
+    .why-bit-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .why-bit-item span {
+        font-size: 20px;
+        color: $Black1;
+        font-weight: 500;
+        direction: rtl;
+    }
+
+    .why-bit-item img {
+        margin-left: 16px;
+    }
+}
+
+
+.suggestions-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 48px 88px;
+    margin-bottom: 0;
+
+    .suggestions-section-content {
+        width: 100%;
+        max-width: 1158px;
+        margin-top: 44px;
+    }
+
+    .suggestion-items-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videos-section {
+        margin-top: 40px;
+    }
+
+    .suggestion-items-container-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .see-all-btn {
+        background-size: 24px;
+        width: 124px;
+    }
+
+    .suggestion-items-container-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: $Gray1;
+        line-height: 42px;
+    }
+
+    .suggestion-items {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.intro-box {
+    width: 370px;
+    min-height: 370px;
+    background: $PureWhite;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+
+    .intro-box-space {
+        margin: 0 24px;
+    }
+
+    .intro-box-img {
+        height: 178px
+    }
+
+    .intro-box-content {
+        padding: 20px 24px 24px;
+
+        .author-info {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 12px;
+
+            .author-avatar {
+                height: 32px;
+                margin-left: 6px;
+            }
+
+            .author-name {
+                font-size: 12px;
+                color: $Blue3;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .intro-box-subject {
+        direction: rtl;
+        color: $Black1;
+        font-size: 18px;
+        margin-bottom: 36px;
+    }
+
+    .intro-box-times {
+        border-top: 1px solid $Gray3;
+        padding-top: 13px;
+        color: $Gray1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .intro-box-times-item {
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-left: 13px;
+        }
+
+        .time-text {
+            direction: rtl;
+        }
+    }
+}

@@ -1,98 +1,137 @@
-﻿@import '../Styles/abstracts/_media-queries.scss';
-@import '../Styles/abstracts/_colors.scss';
-@import '../Styles/abstracts/_functions.scss';
+﻿@import '../Styles/abstracts/_colors.scss';
 
-.footer {
+.footer-container {
+    min-height: 176px;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
+    color: $Gray1;
+    position: relative;
 }
 
 .footer-content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: rem(54px);
-    border-top: rem(1px) solid $S1Color;
-    padding: rem(4px) 0;
-    box-sizing: border-box;
-
-    @include lt-xl {
-        min-height: rem(50px);
-    }
-}
-
-.footer-contact {
-    margin-bottom: rem(4px);
-    font-size: rem(14px);
-    line-height: rem(20px);
-    color: $S4Color;
-
-    @include lg {
-        font-size: rem(13px);
-        line-height: rem(19px);
-    }
-
-    @include lt-lg {
-        font-size: rem(12px);
-    }
-}
-
-.footer-copyright {
-    font-size: rem(12px);
-    line-height: rem(20px);
-    color: $S4Color;
-
-    @include lt-xl {
-        font-size: rem(10px);
-        line-height: rem(16px);
-    }
-}
-
-.footer-social-lnk-grp {
+    flex: 1;
+    background-color: $Blue1;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    padding: 0 140px;
+}
+
+.left-side-content {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer-bit-icon {
+    width: 36px;
+}
+
+.footer-info-text {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.communications-options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
+    width: 172px;
+    cursor: pointer;
+    margin-top: 12px;
+
+    .mail-button {
+        background: url(/images/footer/mail-icon-blue.svg);
+    }
+
+    .whatsup-button {
+        background: url(/images/footer/whats-app-icon-blue.svg);
+    }
+
+    .linkedin-button {
+        background: url(/images/footer/linkedin-icon-blue.svg);
+    }
+
+    .github-button {
+        background: url(/images/footer/github-icon-blue.svg);
+    }
 }
 
-.social-lnk {
-    width: rem(32px);
-    height: rem(32px);
-    background-position: center;
+.communication-button {
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.2s;
+
+    &:hover {
+        top: -3px;
+    }
 }
 
-.twitter-lnk {
-    background-image: url('images/icons/twitter-icon.svg');
+.center-text {
+    min-width: 121px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 4px;
+    font-weight: 500;
+    padding-bottom: 40px;
 }
 
-.youtube-lnk {
-    background-image: url('images/icons/youtube-icon.svg');
+.footer-items-container {
+    flex: 1;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    flex-flow: column nowrap;
+
+    .footer-item {
+        margin-top: 4px;
+        cursor: pointer;
+        line-height: 24px;
+
+        &:hover {
+            color: $Primary;
+        }
+    }
 }
 
-.linkedin-lnk {
-    background-image: url('images/icons/linkedin-icon.svg');
+.bottom-line {
+    height: 32px;
+    margin-top: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background-color: $Blue1;
 }
 
-.github-lnk {
-    background-image: url('images/icons/github-icon.svg');
-}
-
-.text--red {
+.red-heart {
     color: $Red;
+    margin: 0 2px;
 }
 
-::deep {
-    .culture-drp {
-        position: absolute;
-        left: rem(5px);
-        width: rem(105px);
-        background-color: white;
+.back-to-top-button {
+    position: absolute;
+    top: -23px;
+    right: 140px;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: url(/images/footer/go-to-top-icon.svg) no-repeat center;
+    background-size: 43px;
+    height: 43px;
+    width: 43px;
+
+    &:hover {
+        top: -26px;
     }
 }

@@ -47,24 +47,16 @@
     {
         <link rel="manifest" href="manifest.json">
     }
-    <style>
-        html, body, #app-container {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: #0D2960;
-        }
-    </style>
     <link rel="stylesheet" href="_content/Bit.BlazorUI/styles/bit.blazorui.min.css" asp-append-version="@shoudAddAspAppendVersion" />
     <link href="BitCareers.Web.styles.css" rel="stylesheet" asp-append-version="@shoudAddAspAppendVersion" />
+    <link href="styles/app.css" rel="stylesheet" asp-append-version="@shoudAddAspAppendVersion" />
 </head>
 <body>
     <div id="app-container">
-        @if (isDefaultDeploymentType || isPwa)
+        @*@if (isDefaultDeploymentType || isPwa)
         {
             <component type="typeof(BitCareers.Web.LoadingComponent)" param-Color="@("#FFF")" render-mode="@RenderMode.Static" />
-        }
+        }*@
         @RenderBody()
     </div>
 
@@ -83,9 +75,9 @@
                 <script src="_content/Bit.Bswup/bit-bswup.progress.min.js" asp-append-version="@shoudAddAspAppendVersion"></script>
                 <link href="_content/Bit.Bswup/bit-bswup.progress.min.css" rel="stylesheet" asp-append-version="@shoudAddAspAppendVersion">
                 <component type="typeof(Bit.Bswup.BswupProgress)"
-                           param-AutoReload="true"
-                           param-AppContainer="@("#app-container")"
-                           render-mode="@RenderMode.Static" />
+               param-AutoReload="true"
+               param-AppContainer="@("#app-container")"
+               render-mode="@RenderMode.Static" />
             }
             else
             {
@@ -101,9 +93,9 @@
                 {
                     <link rel="stylesheet" href="_content/Bit.Bup/bit-bup.progress.min.css" asp-append-version="@shoudAddAspAppendVersion">
                     <component type="typeof(Bit.Bup.BupProgress)" render-mode="@RenderMode.Static"
-                               param-AutoHide="true"
-                               param-HideApp="true"
-                               param-AppContainer="@("#app-container")" />
+               param-AutoHide="true"
+               param-HideApp="true"
+               param-AppContainer="@("#app-container")" />
                 }
             }
         }

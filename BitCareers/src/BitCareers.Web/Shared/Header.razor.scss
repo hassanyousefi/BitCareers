@@ -1,60 +1,40 @@
-﻿@import '../Styles/abstracts/_media-queries.scss';
-@import '../Styles/abstracts/_colors.scss';
-@import '../Styles/abstracts/_functions.scss';
+﻿@import '../Styles/abstracts/_colors.scss';
 
-.header {
-    position: fixed;
-    top: 0;
-    z-index: 100;
+.header-container {
+    min-height: 72px;
+    background-color: $Blue1;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: rem(48px);
-    padding: 0 rem(32px);
-    box-sizing: border-box;
-    background-color: $Gray5;
-
-    @media all and (max-width: #{em(370px)}) {
-        padding: 0 rem(16px);
-    }
+    padding: 20px 140px;
+    font-weight: 500;
+    user-select: none;
 }
 
-.logo-lnk {
-    width: rem(24px);
-    min-width: rem(24px);
-    height: rem(24px);
-    border-radius: rem(4px);
-    background-image: url('images/bit-logo.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
+.header-bit-icon {
+    width: 42px;
 }
 
-.header-contact {
+.header-items-container {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-::deep .header-item {
-    margin-left: rem(12px);
-}
+.header-item {
+    margin: auto;
+    cursor: pointer;
+    color: $Gray1;
 
-::deep .header-menu {
-    display: none;
-    margin-right: rem(12px);
-
-    span {
-        i {
-            color: $PrimaryColor;
-        }
+    &:hover {
+        color: $Primary;
     }
 
-    @include lt-lg {
-        display: block;
+    &.margin-around {
+        margin: auto 56px !important;
+    }
+
+    &.blue-font-color {
+        color: $Primary !important;
     }
 }

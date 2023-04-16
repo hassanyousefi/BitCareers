@@ -2,6 +2,12 @@
 
 public partial class Footer
 {
+    [Inject] IJSRuntime JsRuntime { get; set; }
+    private async Task BackToTop()
+    {
+        await JsRuntime.InvokeVoidAsync("App.backToTop");
+    }
+
 #if MultilingualEnabled
     protected async override Task OnAfterFirstRenderAsync()
     {
