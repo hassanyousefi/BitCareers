@@ -158,146 +158,28 @@
     <div class="suggestions-section-content">
 
         <div class="suggestion-items-container">
-            <header class="suggestion-items-container-header">
+            <header class="suggestion-items-header-container">
                 <button class="arrow-icon-btn see-all-btn">مشاهده همه</button>
                 <span class="suggestion-items-container-title">مقاله‌ها</span>
             </header>
             <div class="suggestion-items">
-                <div class="intro-box">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="intro-box intro-box-space">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="intro-box">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @for (var introBoxIndex = 0; introBoxIndex < 3; introBoxIndex++)
+                {
+                    <IntroBox></IntroBox>
+                }
             </div>
         </div>
-
-        <div class="suggestion-items-container videos-section">
-            <header class="suggestion-items-container-header">
+        <div class="suggestion-items-container">
+            <header class="suggestion-items-header-container">
                 <button class="arrow-icon-btn see-all-btn">مشاهده همه</button>
                 <span class="suggestion-items-container-title">ویدئوها</span>
             </header>
             <div class="suggestion-items">
-                <div class="intro-box">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="intro-box intro-box-space">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="intro-box">
-                    <img src="/images/main-page/article-sample.svg" class="intro-box-img" />
-                    <div class="intro-box-content">
-                        <div class="intro-box-subject">تاثیر Chat GTP رو محتوای سایت‌های Bit</div>
-                        <div class="author-info">
-                            <div class="author-name">سارا نیازی</div>
-                            <img class="author-avatar" src="/images/main-page/article-author-avatar.svg" />
-                        </div>
-                        <div class="intro-box-times">
-                            <div class="intro-box-times-item">
-                                <span class="time-text">۲۲ مهر ۱۴۰۰</span>
-                                <img src="/images/main-page/calendar-icon.svg" class="calendar-icon" />
-                            </div>
-                            <div class="intro-box-times-item">
-                                <span class="time-text"> ۱۰ دقیقه</span>
-                                <img src="/images/main-page/watch-icon.svg" class="watch-icon" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @for (var introBoxIndex = 0; introBoxIndex < 3; introBoxIndex++)
+                {
+                    <IntroBox></IntroBox>
+                }
             </div>
         </div>
-
     </div>
 </section>
