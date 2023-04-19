@@ -18,7 +18,7 @@
     <div class="section-title">ما رو بشناس</div>
     <div class="about-us-section-content">
         <div class="about-us-section-img-container">
-            <div class="about-us-section-img"></div>
+            <img src="/images/main-page/team-work-pic.svg" class="about-us-section-img" />
             <img src="/images/ui-effect/ui-effect-img-01.svg" class="ui-effect-1" />
             <img src="/images/ui-effect/ui-effect-img-02.svg" class="ui-effect-2" />
             <img src="/images/ui-effect/ui-effect-img-03.svg" class="ui-effect-3" />
@@ -34,15 +34,9 @@
 <section class="careers-section-container">
     <div class="section-title">فرصت‌های همکاری</div>
     <div class="careers-section-content">
-        @for (var i = 0; i < 7; i++)
+        @foreach (var career in Careers)
         {
-            <div class="careers-box">
-                <button class="careers-button btn-pad">ارسال رزومه</button>
-                <div class="careers-box-content">
-                    <div class="careers-box-title">(Product Manager) مدیر پروژه</div>
-                    <img src="/images/main-page/product-manager-img.svg" class="careers-box-img" />
-                </div>
-            </div>
+            <CareerBox CareerModel="career"></CareerBox>
         }
         <div class="more-careers">
             <div class="more-careers-title">.مهارتت جز موارد بالا نیست؟ مشکلی نیست، اینجا از خودت برامون بگو</div>
@@ -114,42 +108,15 @@
 <section class="why-bit-section-container">
     <div class="section-title">چرا bit؟</div>
     <div class="why-bit-section-content">
-        <div class="why-bit-item">
-            <span>ساعت ‌کاری منعطف</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>تکنولوژی بروز</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>هم‌تیمی‌‌های خفن</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>تیم صمیمی و پویا</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>کار Open Source</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>تجربه دورکاری</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>کار حرفه‌ای و باکیفیت</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>استفاده از Cloud</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
-        <div class="why-bit-item">
-            <span>فضای رشد فردی</span>
-            <img src="/images/main-page/tick-icon-blue.svg" />
-        </div>
+        <div class="why-bit-item-text">ساعت ‌کاری منعطف</div>
+        <div class="why-bit-item-text">تکنولوژی بروز</div>
+        <div class="why-bit-item-text">هم‌تیمی‌‌های خفن</div>
+        <div class="why-bit-item-text">تیم صمیمی و پویا</div>
+        <div class="why-bit-item-text">کار Open Source</div>
+        <div class="why-bit-item-text">تجربه دورکاری</div>
+        <div class="why-bit-item-text">کار حرفه‌ای و باکیفیت</div>
+        <div class="why-bit-item-text">استفاده از Cloud</div>
+        <div class="why-bit-item-text">فضای رشد فردی</div>
     </div>
 </section>
 
@@ -163,9 +130,9 @@
                 <span class="suggestion-items-container-title">مقاله‌ها</span>
             </header>
             <div class="suggestion-items">
-                @for (var introBoxIndex = 0; introBoxIndex < 3; introBoxIndex++)
+                @foreach (var suggestedArticle in SuggestedArticles)
                 {
-                    <IntroBox></IntroBox>
+                    <IntroBox IntroBoxModel="suggestedArticle"></IntroBox>
                 }
             </div>
         </div>
@@ -175,9 +142,9 @@
                 <span class="suggestion-items-container-title">ویدئوها</span>
             </header>
             <div class="suggestion-items">
-                @for (var introBoxIndex = 0; introBoxIndex < 3; introBoxIndex++)
+                @foreach (var suggestedVideo in SuggestedVideos)
                 {
-                    <IntroBox></IntroBox>
+                    <IntroBox IntroBoxModel="suggestedVideo"></IntroBox>
                 }
             </div>
         </div>

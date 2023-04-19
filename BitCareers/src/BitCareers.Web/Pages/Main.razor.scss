@@ -38,15 +38,6 @@ section {
     text-align: right;
 }
 
-.careers-button {
-    background-color: $Primary;
-    color: $PureWhite;
-    height: 48px;
-
-    &:hover {
-        background-color: $Blue4;
-    }
-}
 /*--- end general classes ---*/
 
 
@@ -95,6 +86,16 @@ section {
             padding: 0 2px;
         }
     }
+
+    .careers-button {
+        background-color: $Primary;
+        color: $PureWhite;
+        height: 48px;
+
+        &:hover {
+            background-color: $Blue4;
+        }
+    }
 }
 
 
@@ -114,11 +115,8 @@ section {
         margin-right: 50px;
         position: relative;
         height: fit-content;
-        flex: 1;
 
         .about-us-section-img {
-            background: url(/images/main-page/team-work-pic.svg) no-repeat center;
-            background-size: contain;
             height: 248px;
         }
 
@@ -188,40 +186,6 @@ section {
         margin-top: 64px;
     }
 
-    .careers-box {
-        width: 100%;
-        min-height: 160px;
-        background: $PureWhite;
-        border: 1px solid $Gray3;
-        border-radius: 12px;
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 28px 56px;
-
-        &:last-child {
-            margin-bottom: 32px !important;
-        }
-
-        .careers-box-content {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-        }
-
-        .careers-box-title {
-            margin-right: 48px;
-            font-size: 20px;
-            font-weight: 500;
-            color: $Gray1;
-        }
-
-        .careers-box-img {
-            width: 148px;
-        }
-    }
-
     .more-careers {
         width: 100%;
         border: 2px solid $Blue1;
@@ -275,7 +239,6 @@ section {
 
         .product-designer-info-container {
             flex: 1;
-            max-width: 373px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -444,11 +407,15 @@ section {
         justify-content: flex-end;
     }
 
-    .why-bit-item span {
+
+    .why-bit-item-text {
         font-size: 20px;
         color: $Black1;
         font-weight: 500;
         direction: rtl;
+        background: url(/images/main-page/tick-icon-blue.svg) no-repeat right;
+        background-size: 40px;
+        padding-right: 56px;
     }
 
     .why-bit-item img {
