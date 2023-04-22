@@ -30,5 +30,13 @@
   {
     "outputFile": "wwwroot/styles/app.css",
     "inputFile": "Styles/app.scss"
+  },
+  {
+    "outputFile": "Components/CareerBox.razor.css",
+    "inputFile": "Components/CareerBox.razor.scss"
+  },
+  {
+    "outputFile": "Components/IntroBox.razor.css",
+    "inputFile": "Components/IntroBox.razor.scss"
   }
 ]

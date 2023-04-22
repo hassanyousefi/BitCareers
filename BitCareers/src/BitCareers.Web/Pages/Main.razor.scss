@@ -1,8 +1,9 @@
 @import '../Styles/abstracts/_colors.scss';
+@import '../Styles/abstracts/_functions.scss';
 
 /*--- start general classes ---*/
 section {
-    margin-bottom: 88px;
+    margin-bottom: rem(88px);
     user-select: none;
 
     &:nth-child(odd) {
@@ -15,18 +16,18 @@ section {
 }
 
 .section-title {
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: 600;
     color: $Black1;
-    padding-bottom: 12px;
-    border-bottom: 3px solid $Orange1;
+    padding-bottom:rem(12px);
+    border-bottom: rem(3px) solid $Orange1;
     margin: 0 auto;
     direction: rtl;
     text-align: center;
 }
 
 .btn-pad {
-    padding: 8px 32px;
+    padding: rem(8px) rem(32px);
     border-radius: 4px;
     font-weight: 500;
 }
@@ -43,16 +44,16 @@ section {
 
 .hero-section-container {
     display: flex;
-    padding: 56px 140px 0 100px;
+    padding: rem(56px) rem(140px) 0 rem(100px);
     background-color: $Blue1 !important;
     align-items: flex-end;
 
     .person-pic {
         background: url(/images/main-page/person-pic.svg) no-repeat bottom;
         background-size: contain;
-        margin-right: 30px;
+        margin-right: rem(30px);
         width: 100%;
-        height: 456px;
+        height: rem(456px);
         flex: 3;
     }
 
@@ -62,35 +63,35 @@ section {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-end;
-        padding: 78px 0;
+        padding: rem(78px) 0;
 
         .hero-section-title {
             color: $Black1;
-            font-size: 30px;
+            font-size: rem(30px);
             font-weight: 600;
-            margin-bottom: 16px;
-            line-height: 56px;
+            margin-bottom: rem(16px);
+            line-height: rem(56px);
             direction: rtl;
         }
 
         .hero-section-description {
-            margin-bottom: 40px;
+            margin-bottom: rem(40px);
             color: $Gray2;
-            font-size: 24px;
-            line-height: 48px;
+            font-size: rem(24px);
+            line-height: rem(48px);
             direction: rtl;
         }
 
         .hero-section-bit-icon {
-            height: 24px;
-            padding: 0 2px;
+            height: rem(24px);
+            margin-bottom: rem(-5px)
         }
     }
 
     .careers-button {
         background-color: $Primary;
         color: $PureWhite;
-        height: 48px;
+        height: rem(48px);
 
         &:hover {
             background-color: $Blue4;
@@ -102,22 +103,22 @@ section {
 .about-us-section-container {
     display: flex;
     flex-flow: column nowrap;
-    padding: 40px 140px 80px 140px;
+    padding: rem(40px) rem(140px) rem(80px) rem(140px);
 
     .about-us-section-content {
-        margin-top: 73px;
+        margin-top: rem(73px);
         display: flex;
         position: relative;
         justify-content: space-between;
     }
 
     .about-us-section-img-container {
-        margin-right: 50px;
+        margin-right: rem(50px);
         position: relative;
         height: fit-content;
 
         .about-us-section-img {
-            height: 248px;
+            height: rem(248px);
         }
 
         .ui-effect-1 {
@@ -147,11 +148,11 @@ section {
         flex: 3;
 
         .about-us-section-description {
-            font-size: 20px;
+            font-size: rem(20px);
             direction: rtl;
             color: $Black1;
-            margin-bottom: 32px;
-            margin-top: 24px;
+            margin-bottom: rem(32px);
+            margin-top: rem(24px);
         }
 
         .about-us-section-btn {
@@ -175,23 +176,23 @@ section {
 }
 
 .careers-section-container {
-    padding: 40px 20px 90px;
+    padding: rem(40px) rem(20px) rem(90px);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
     .careers-section-content {
-        max-width: 970px;
+        max-width: rem(970px);
         position: relative;
-        margin-top: 64px;
+        margin-top: rem(64px);
     }
 
     .more-careers {
         width: 100%;
         border: 2px solid $Blue1;
-        min-height: 186px;
+        min-height: rem(186px);
         border-radius: 12px;
-        padding: 48px 200px;
+        padding: rem(48px) rem(200px);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -199,20 +200,20 @@ section {
 
         .more-careers-title {
             width: 100%;
-            font-size: 20px;
+            font-size: rem(20px);
             font-weight: 500;
             text-align: center;
-            margin-bottom: 18px;
+            margin-bottom: rem(18px);
         }
 
         .send-resume-btn {
-            background-size: 28px;
-            width: 121px;
+            background-size: rem(28px);
+            width: rem(121px);
         }
 
         .ui-effect-bell {
             position: absolute;
-            top: 34px;
+            top: rem(34px);
             right: 73px;
         }
     }
@@ -226,10 +227,10 @@ section {
 
 
 .feedback-section {
-    padding-bottom: 40px;
+    padding-bottom: rem(40px);
 
     ::deep .bit-carousel {
-        height: 720px;
+        height: rem(720px);
     }
 
     .feedback-container {
@@ -242,7 +243,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding-left: 80px;
+            padding-left: rem(80px);
         }
 
         .product-designer-info {
@@ -256,29 +257,29 @@ section {
         .designer-avatar {
             background: url(/images/main-page/zahra-ebrahimi-avatar.svg) no-repeat center;
             background-size: contain;
-            height: 260px;
+            height: rem(260px);
             width: 100%;
         }
 
         .designer-name {
             color: $Gray1;
-            font-size: 24px;
+            font-size: rem(24px);
             font-weight: 500;
-            margin-top: 13px;
-            line-height: 48px;
+            margin-top: rem(13px);
+            line-height: rem(48px);
             direction: rtl;
         }
 
         .designer-post-text {
             color: $Gray4;
-            font-size: 20px;
-            margin-top: 6px;
-            line-height: 40px;
+            font-size: rem(20px);
+            margin-top: rem(6px);
+            line-height: rem(40px);
         }
 
         .feedback-content {
             flex: 3;
-            padding: 40px 86px 0 56px;
+            padding: rem(40px) rem(86px) 0 rem(56px);
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -286,10 +287,10 @@ section {
         }
 
         .feedback-description {
-            margin-top: 189px;
-            font-size: 20px;
+            margin-top: rem(189px);
+            font-size: rem(20px);
             color: $Gray1;
-            line-height: 40px;
+            line-height: rem(40px);
             text-align: center;
             direction: rtl;
             position: relative;
@@ -315,28 +316,28 @@ section {
 
         .slide-btns {
             display: flex;
-            width: 120px;
+            width: rem(120px);
             justify-content: space-between;
-            margin-top: 120px;
+            margin-top: rem(120px);
         }
 
         .slides-left-arrow {
             background: url(/images/main-page/slides-left-arrow-empty.svg) no-repeat center;
-            width: 40px;
-            height: 40px;
+            width: rem(40px);
+            height: rem(40px);
         }
 
         .slides-right-arrow {
             background: url(/images/main-page/slides-right-arrow-filled.svg) no-repeat center;
-            width: 40px;
-            height: 40px;
+            width: rem(40px);
+            height: rem(40px);
         }
 
         .team-members-img {
             flex: 1;
             background: url(/images/main-page/team-members-avatars.svg) no-repeat right;
             background-size: contain;
-            height: 680px;
+            height: rem(680px);
         }
     }
 
@@ -351,7 +352,7 @@ section {
 
 
 .flow-section-container {
-    padding: 40px 50px 127px;
+    padding: rem(40px) rem(50px) rem(127px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -361,11 +362,11 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 48px;
+        margin-top: rem(48px);
     }
 
     .flow-step {
-        max-width: 120px;
+        max-width: rem(120px);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -376,12 +377,12 @@ section {
     .step-name {
         font-weight: 500;
         color: $Black1;
-        margin-top: 8px;
+        margin-top: rem(8px);
     }
 
     .connection-line {
-        margin-top: 8px;
-        max-width: 130px;
+        margin-top: rem(8px);
+        max-width: rem(130px);
         width: 100%;
         border-bottom: 2px dashed $Blue5;
     }
@@ -392,13 +393,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px 50px 80px;
+    padding: rem(48px) rem(50px) rem(80px);
 
     .why-bit-section-content {
-        margin-top: 65px;
+        margin-top: rem(65px);
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-gap: 21px 9vw;
+        grid-gap: rem(21px) 9vw;
     }
 
     .why-bit-item {
@@ -409,17 +410,17 @@ section {
 
 
     .why-bit-item-text {
-        font-size: 20px;
+        font-size: rem(20px);
         color: $Black1;
         font-weight: 500;
         direction: rtl;
         background: url(/images/main-page/tick-icon-blue.svg) no-repeat right;
-        background-size: 40px;
-        padding-right: 56px;
+        background-size: rem(40px);
+        padding-right: rem(56px);
     }
 
     .why-bit-item img {
-        margin-left: 16px;
+        margin-left: rem(16px);
     }
 }
 
@@ -428,19 +429,19 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px;
+    padding: rem(48px);
     margin-bottom: 0;
 
     .suggestions-section-content {
         width: 100%;
-        max-width: 1158px;
-        margin-top: 44px;
+        max-width: rem(1158px);
+        margin-top: rem(44px);
     }
 
     .suggestion-items-container {
         display: flex;
         flex-direction: column;
-        margin-bottom: 40px;
+        margin-bottom: rem(40px);
     }
 
     .suggestion-items-header-container {
@@ -448,19 +449,19 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 8px;
+        margin-bottom: rem(8px);
     }
 
     .see-all-btn {
-        background-size: 24px;
-        width: 124px;
+        background-size: rem(24px);
+        width: rem(124px);
     }
 
     .suggestion-items-container-title {
-        font-size: 20px;
+        font-size: rem(20px);
         font-weight: 500;
         color: $Gray1;
-        line-height: 42px;
+        line-height: rem(42px);
     }
 
     .suggestion-items {

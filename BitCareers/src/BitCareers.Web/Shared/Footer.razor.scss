@@ -1,7 +1,8 @@
 ﻿@import '../Styles/abstracts/_colors.scss';
+@import '../Styles/abstracts/_functions.scss';
 
 .footer-container {
-    min-height: 176px;
+    min-height: rem(176px);
     display: flex;
     flex-direction: column;
     color: $Gray1;
@@ -13,25 +14,25 @@
     background-color: $Blue1;
     display: flex;
     flex-flow: row nowrap;
-    padding: 0 140px;
+    padding: 0 rem(140px);
 }
 
 .left-side-content {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
-    padding-top: 24px;
+    padding-top: rem(24px);
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 .footer-bit-icon {
-    width: 36px;
+    width: rem(36px);
 }
 
 .footer-info-text {
-    font-size: 14px;
-    margin-top: 8px;
+    font-size: rem(14px);
+    margin-top: rem(8px);
 }
 
 .communications-options {
@@ -39,9 +40,9 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 172px;
+    width: rem(172px);
     cursor: pointer;
-    margin-top: 12px;
+    margin-top: rem(12px);
 
     .mail-button {
         background: url(/images/footer/mail-icon-blue.svg);
@@ -61,9 +62,9 @@
 }
 
 .communication-button {
-    width: 28px;
-    height: 28px;
-    background-size: 28px;
+    width: rem(28px);
+    height: rem(28px);
+    background-size: rem(28px);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -75,28 +76,28 @@
 }
 
 .center-text {
-    min-width: 121px;
+    min-width: rem(121px);
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin: 0 4px;
+    margin: 0 rem(4px);
     font-weight: 500;
-    padding-bottom: 40px;
+    padding-bottom: rem(40px);
 }
 
 .footer-items-container {
     flex: 1;
-    font-size: 14px;
+    font-size: rem(14px);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-bottom: 30px;
+    padding-bottom: rem(30px);
     flex-flow: column nowrap;
 
     .footer-item {
-        margin-top: 4px;
+        margin-top: rem(4px);
         cursor: pointer;
-        line-height: 24px;
+        line-height: rem(24px);
 
         &:hover {
             color: $Primary;
@@ -105,19 +106,19 @@
 }
 
 .bottom-line {
-    height: 32px;
-    margin-top: 1px;
+    height: rem(32px);
+    margin-top: rem(1px);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: rem(10px);
     background-color: $Blue1;
 }
 
 .red-heart {
     color: $Red;
-    margin: 0 2px;
+    margin: 0 rem(2px);
 }
 
 .back-to-top-button {
@@ -127,9 +128,9 @@
     transition: all 0.2s;
     cursor: pointer;
     background: url(/images/footer/go-to-top-icon.svg) no-repeat center;
-    background-size: 43px;
-    height: 43px;
-    width: 43px;
+    background-size: rem(43px);
+    height: rem(43px);
+    width: rem(43px);
 
     &:hover {
         top: -26px;

@@ -1,8 +1,9 @@
 @import '../Styles/abstracts/_colors.scss';
+@import '../Styles/abstracts/_functions.scss';
 
 .intro-box {
-    width: 370px;
-    min-height: 370px;
+    width: rem(370px);
+    min-height: rem(370px);
     background: $PureWhite;
     display: flex;
     flex-direction: column;
@@ -10,29 +11,29 @@
     border-radius: 15px;
 
     &:nth-child(even) {
-        margin: 0 24px;
+        margin: 0 rem(24px);
     }
 
     .intro-box-img {
-        height: 178px
+        height: rem(178px)
     }
 
     .intro-box-content {
-        padding: 20px 24px 24px;
+        padding: rem(20px) rem(24px) rem(24px);
 
         .author-info {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: rem(12px);
 
             .author-avatar {
-                height: 32px;
-                margin-left: 6px;
+                height: rem(32px);
+                margin-left: rem(6px);
             }
 
             .author-name {
-                font-size: 12px;
+                font-size: rem(12px);
                 color: $Blue3;
                 font-weight: 500;
             }
@@ -42,27 +43,27 @@
     .intro-box-subject {
         direction: rtl;
         color: $Black1;
-        font-size: 18px;
-        margin-bottom: 36px;
+        font-size: rem(18px);
+        margin-bottom: rem(36px);
     }
 
     .intro-box-times {
         border-top: 1px solid $Gray3;
-        padding-top: 13px;
+        padding-top: rem(13px);
         color: $Gray1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        font-size: 12px;
+        font-size: rem(12px);
     }
 
     .intro-box-times-item {
-        margin-left: 12px;
+        margin-left: rem(12px);
         display: flex;
         align-items: center;
 
         img {
-            margin-left: 13px;
+            margin-left: rem(13px);
         }
 
         .time-text {

@@ -1,19 +1,20 @@
 ﻿@import '../Styles/abstracts/_colors.scss';
+@import '../Styles/abstracts/_functions.scss';
 
 .header-container {
-    min-height: 72px;
+    min-height: rem(72px);
     background-color: $Blue1;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 140px;
+    padding: rem(20px) rem(140px);
     font-weight: 500;
     user-select: none;
 }
 
 .header-bit-icon {
-    width: 42px;
+    width: rem(42px);
 }
 
 .header-items-container {
@@ -31,7 +32,7 @@
     }
 
     &.margin-around {
-        margin: auto 56px !important;
+        margin: auto rem(56px) !important;
     }
 
     &.blue-font-color {
