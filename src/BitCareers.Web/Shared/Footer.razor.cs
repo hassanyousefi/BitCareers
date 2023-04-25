@@ -8,19 +8,6 @@ public partial class Footer
         await JsRuntime.InvokeVoidAsync("App.backToTop");
     }
 
-#if MultilingualEnabled
-    protected async override Task OnAfterFirstRenderAsync()
-    {
-        var preferredCultureCookie = await JSRuntime.InvokeAsync<string?>("window.App.getCookie", ".AspNetCore.Culture");
-
-        SelectedCulture = CultureInfoManager.GetCurrentCulture(preferredCultureCookie);
-
-        StateHasChanged();
-
-        await base.OnAfterFirstRenderAsync();
-    }
-#endif
-
     private string? SelectedCulture;
 
     private async Task OnCultureChanged()

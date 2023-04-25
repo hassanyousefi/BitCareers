@@ -13,7 +13,6 @@ public static class IServiceCollectionExtensions
         services.AddTransient<AppHttpClientHandler>();
 
         services.AddScoped<AuthenticationStateProvider, AppAuthenticationStateProvider>();
-        services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddScoped(sp => (AppAuthenticationStateProvider)sp.GetRequiredService<AuthenticationStateProvider>());
 
         return services;

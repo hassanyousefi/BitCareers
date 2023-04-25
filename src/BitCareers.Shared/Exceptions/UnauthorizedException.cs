@@ -21,16 +21,6 @@ public class UnauthorizedException : RestException
     {
     }
 
-    public UnauthorizedException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public UnauthorizedException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected UnauthorizedException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

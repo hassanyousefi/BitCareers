@@ -57,18 +57,6 @@ public class Middlewares
         app.UseAuthentication();
         app.UseAuthorization();
 
-#if MultilingualEnabled
-        var supportedCultures = CultureInfoManager.SupportedCultures.Select(sc => CultureInfoManager.CreateCultureInfo(sc.code)).ToArray();
-        app.UseRequestLocalization(new RequestLocalizationOptions
-        {
-            SupportedCultures = supportedCultures,
-            SupportedUICultures = supportedCultures,
-            ApplyCurrentCultureToResponseHeaders = true
-        }.SetDefaultCulture(CultureInfoManager.DefaultCulture.code));
-#endif
-
-        app.UseHttpResponseExceptionHandler();
-
         app.UseSwagger();
 
         app.UseSwaggerUI(options =>

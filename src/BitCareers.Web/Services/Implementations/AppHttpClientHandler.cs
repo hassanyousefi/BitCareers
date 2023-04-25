@@ -19,11 +19,6 @@ public partial class AppHttpClientHandler : HttpClientHandler
             }
         }
 
-#if MultilingualEnabled && BlazorServer
-        string cultureCookie = $"c={CultureInfo.CurrentCulture.Name}|uic={CultureInfo.CurrentCulture.Name}";
-        request.Headers.Add("Cookie", $".AspNetCore.Culture={cultureCookie}");
-#endif
-
         var response = await base.SendAsync(request, cancellationToken);
 
         if (response.StatusCode is HttpStatusCode.Unauthorized)

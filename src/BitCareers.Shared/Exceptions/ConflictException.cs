@@ -16,16 +16,6 @@ public class ConflictException : RestException
     {
     }
 
-    public ConflictException(string message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
-    public ConflictException(LocalizedString message)
-        : base(message)
-    {
-    }
-
     public ConflictException(LocalizedString message, Exception? innerException)
         : base(message, innerException)
     {

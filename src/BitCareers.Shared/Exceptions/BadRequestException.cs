@@ -21,16 +21,6 @@ public class BadRequestException : RestException
     {
     }
 
-    public BadRequestException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public BadRequestException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected BadRequestException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

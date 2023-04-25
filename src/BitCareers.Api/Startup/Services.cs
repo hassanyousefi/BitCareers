@@ -103,12 +103,6 @@ public static class Services
 
         services.AddSwaggerGen();
 
-        services.AddIdentity(configuration);
-
-        services.AddJwt(configuration);
-
-        services.AddHealthChecks(env, configuration);
-
         var fluentEmailServiceBuilder = services.AddFluentEmail(appSettings.EmailSettings.DefaulFromEmail, appSettings.EmailSettings.DefaultFromName)
             .AddRazorRenderer();
 

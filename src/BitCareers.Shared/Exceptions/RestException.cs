@@ -21,16 +21,6 @@ public class RestException : KnownException
     {
     }
 
-    public RestException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public RestException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected RestException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

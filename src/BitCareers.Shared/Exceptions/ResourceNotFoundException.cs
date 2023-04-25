@@ -21,16 +21,6 @@ public class ResourceNotFoundException : RestException
     {
     }
 
-    public ResourceNotFoundException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public ResourceNotFoundException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected ResourceNotFoundException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

@@ -21,16 +21,6 @@ public class ForbiddenException : RestException
     {
     }
 
-    public ForbiddenException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public ForbiddenException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected ForbiddenException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

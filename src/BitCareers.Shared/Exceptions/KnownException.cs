@@ -17,18 +17,6 @@ public abstract class KnownException : ApplicationException
         Key = message;
     }
 
-    public KnownException(LocalizedString message)
-        : base(message.Value)
-    {
-        Key = message.Name;
-    }
-
-    public KnownException(LocalizedString message, Exception? innerException)
-        : base(message.Value, innerException)
-    {
-        Key = message.Name;
-    }
-
     protected KnownException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {

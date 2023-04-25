@@ -15,16 +15,6 @@ public class DomainLogicException : KnownException
     {
     }
 
-    public DomainLogicException(LocalizedString message)
-        : base(message)
-    {
-    }
-
-    public DomainLogicException(LocalizedString message, Exception? innerException)
-        : base(message, innerException)
-    {
-    }
-
     protected DomainLogicException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {
