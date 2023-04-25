@@ -20,9 +20,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "تاثیر Chat GTP رو محتوای سایت‌های Bit",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Article,
                     StudyTime = "۱۰"
@@ -31,9 +31,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "تاثیر Chat GTP رو محتوای سایت‌های Bit",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",    
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Article,
                     StudyTime = "۱۰"
@@ -42,9 +42,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "تاثیر Chat GTP رو محتوای سایت‌های Bit",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Article,
                     StudyTime = "۱۰"
@@ -58,9 +58,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "درباره Bit Platform ",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Video,
                     WatchingTime = "۱۰"
@@ -69,9 +69,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "درباره Bit Platform ",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Video,
                     WatchingTime = "۱۰"
@@ -80,9 +80,9 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Subject = "درباره Bit Platform ",
-                    ImgUrl = "/images/main-page/article-sample.svg",
+                    ImgUrl = "/images/main-page/sample-img.png",
                     AuthorName = "سارا نیازی",
-                    AuthorAvatarUrl = "/images/main-page/article-author-avatar.svg",
+                    AuthorAvatarUrl = "/images/main-page/sample-author-avatar.svg",
                     UploadDate = "۲۲ مهر ۱۴۰۰",
                     Type = IntroBoxType.Video,
                     WatchingTime = "۱۰"
