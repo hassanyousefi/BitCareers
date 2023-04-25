@@ -47,16 +47,47 @@
     {
         <link rel="manifest" href="manifest.json">
     }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        html, body, #app-container {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            font-family: Estedad, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* this make the img non-draggble */
+        img {
+            user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        button {
+            font-family: Estedad;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
     <link rel="stylesheet" href="_content/Bit.BlazorUI/styles/bit.blazorui.min.css" asp-append-version="@shoudAddAspAppendVersion" />
     <link href="BitCareers.Web.styles.css" rel="stylesheet" asp-append-version="@shoudAddAspAppendVersion" />
-    <link href="styles/app.css" rel="stylesheet" asp-append-version="@shoudAddAspAppendVersion" />
 </head>
 <body>
     <div id="app-container">
-        @*@if (isDefaultDeploymentType || isPwa)
+        @if (isDefaultDeploymentType || isPwa)
         {
             <component type="typeof(BitCareers.Web.LoadingComponent)" param-Color="@("#FFF")" render-mode="@RenderMode.Static" />
-        }*@
+        }
         @RenderBody()
     </div>
 

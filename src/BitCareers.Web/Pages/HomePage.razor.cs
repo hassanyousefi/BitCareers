@@ -2,7 +2,7 @@
 
 namespace BitCareers.Web.Pages
 {
-    public partial class Main
+    public partial class HomePage
     {
         private BitCarousel? carousel;
 
