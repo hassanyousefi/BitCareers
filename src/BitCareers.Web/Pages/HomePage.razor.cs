@@ -95,37 +95,37 @@ namespace BitCareers.Web.Pages
                 {
                     Id = 1,
                     Title = "(Product Manager) مدیر پروژه",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
                 new CareerDto
                 {
                     Id = 1,
                     Title = " (Scrum Master) اسکرام مستر",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
                 new CareerDto
                 {
                     Id = 1,
                     Title = "(Developer) برنامه نویس",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
                 new CareerDto
                 {
                     Id = 1,
                     Title = "(Product Manager) مدیر پروژه",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
                 new CareerDto
                 {
                     Id = 1,
                     Title = " (Scrum Master) اسکرام مستر",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
                 new CareerDto
                 {
                     Id = 1,
                     Title = "(Developer) برنامه نویس",
-                    ImgUrl = "/images/main-page/product-manager-img.svg"
+                    ImgUrl = "/images/main-page/product-manager-img.png"
                 },
 
             };

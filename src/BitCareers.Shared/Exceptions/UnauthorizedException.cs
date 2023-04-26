@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class UnauthorizedException : RestException
 {
-    public UnauthorizedException()
-        : base(nameof(AppStrings.UnauthorizedException))
-    {
-    }
-
     public UnauthorizedException(string message)
         : base(message)
     {

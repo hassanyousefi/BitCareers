@@ -3,7 +3,6 @@ using System.Net.Mail;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.ResponseCompression;
-using BitCareers.Api.Services.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 #if BlazorWebAssembly
 using Microsoft.AspNetCore.Components;
@@ -19,11 +18,7 @@ public static class Services
     {
         // Services being registered here can get injected into controllers and services in Api project.
 
-        var appSettings = configuration.GetSection(nameof(AppSettings)).Get<AppSettings>();
-
         services.AddSharedServices();
-
-        services.AddScoped<IUserInformationProvider, UserInformationProvider>();
 
 #if BlazorWebAssembly
         services.AddTransient<IAuthTokenProvider, ServerSideAuthTokenProvider>();
@@ -55,7 +50,6 @@ public static class Services
         services
             .AddControllers()
             .AddOData()
-            .AddDataAnnotationsLocalization(options => options.DataAnnotationLocalizerProvider = StringLocalizerProvider.ProvideLocalizer)
             .ConfigureApiBehaviorOptions(options =>
             {
                 options.InvalidModelStateResponseFactory = context =>
@@ -84,50 +78,11 @@ public static class Services
             .Configure<BrotliCompressionProviderOptions>(opt => opt.Level = CompressionLevel.Fastest)
             .Configure<GzipCompressionProviderOptions>(opt => opt.Level = CompressionLevel.Fastest);
 
-        services.AddDbContext<AppDbContext>(options =>
-        {
-            options
-            .UseSqlServer(configuration.GetConnectionString("SqlServerConnectionString"), sqlOpt =>
-            {
-                sqlOpt.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
-            });
-        });
-
-        services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
-
-        services.AddScoped(sp => sp.GetRequiredService<IOptionsSnapshot<AppSettings>>().Value);
-
         services.AddEndpointsApiExplorer();
 
         services.AddAutoMapper(typeof(Program).Assembly);
 
         services.AddSwaggerGen();
 
-        var fluentEmailServiceBuilder = services.AddFluentEmail(appSettings.EmailSettings.DefaulFromEmail, appSettings.EmailSettings.DefaultFromName)
-            .AddRazorRenderer();
-
-        if (appSettings.EmailSettings.UseLocalFolderForEmails)
-        {
-            var sentEmailsFolderPath = Path.Combine(AppContext.BaseDirectory, "sent-emails");
-
-            Directory.CreateDirectory(sentEmailsFolderPath);
-
-            fluentEmailServiceBuilder.AddSmtpSender(() => new SmtpClient
-            {
-                DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory,
-                PickupDirectoryLocation = sentEmailsFolderPath
-            });
-        }
-        else
-        {
-            if (appSettings.EmailSettings.HasCredential)
-            {
-                fluentEmailServiceBuilder.AddSmtpSender(appSettings.EmailSettings.Host, appSettings.EmailSettings.Port, appSettings.EmailSettings.UserName, appSettings.EmailSettings.Password);
-            }
-            else
-            {
-                fluentEmailServiceBuilder.AddSmtpSender(appSettings.EmailSettings.Host, appSettings.EmailSettings.Port);
-            }
-        }
     }
 }

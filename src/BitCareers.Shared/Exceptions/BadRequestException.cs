@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class BadRequestException : RestException
 {
-    public BadRequestException()
-        : base(nameof(AppStrings.BadRequestException))
-    {
-    }
-
     public BadRequestException(string message)
         : base(message)
     {

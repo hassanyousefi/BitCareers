@@ -35,7 +35,6 @@
         <Using Include="BitCareers.Shared.Dtos" />
         <Using Include="BitCareers.Shared.Enums" />
         <Using Include="BitCareers.Shared.Infra" />
-        <Using Include="BitCareers.Shared.Resources" />
         <Using Include="BitCareers.Shared.Exceptions" />
         <Using Include="BitCareers.Shared.Services.Contracts" />
     </ItemGroup>

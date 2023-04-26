@@ -25,19 +25,13 @@ public class HttpResponseExceptionHandlerMiddleware
         catch (Exception e)
         {
             var exception = UnWrapException(e);
-            var localizer = context.RequestServices.GetRequiredService<IStringLocalizer<AppStrings>>();
             var knownException = exception as KnownException;
 
             // The details of all of the exceptions are returned only in dev mode. in any other modes like production, only the details of the known exceptions are returned.
             string key = knownException?.Key ?? nameof(UnknownException);
-            string message = knownException?.Message ?? (webHostEnvironment.IsDevelopment() ? exception.Message : localizer[nameof(UnknownException)]);
+            string message =  exception.Message;
 
             var statusCode = (int)(exception is RestException restExp ? restExp.StatusCode : HttpStatusCode.InternalServerError);
-
-            if (exception is KnownException && message == key)
-            {
-                message = localizer[message];
-            }
 
             RestErrorInfo restExceptionPayload = new RestErrorInfo
             {

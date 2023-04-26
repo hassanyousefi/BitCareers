@@ -68,19 +68,6 @@ public class Middlewares
         {
             endpoints.MapControllers().RequireAuthorization();
 
-            var appsettings = configuration.GetSection(nameof(AppSettings)).Get<AppSettings>();
-
-            var healthCheckSettings = appsettings.HealthCheckSettings;
-
-            if (healthCheckSettings.EnableHealthChecks)
-            {
-                endpoints.MapHealthChecks("/healthz", new HealthCheckOptions
-                {
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
-
-                endpoints.MapHealthChecksUI();
-            }
 
 #if BlazorWebAssembly
             endpoints.MapFallbackToPage("/_Host");

@@ -6,10 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class TooManyRequestsExceptions : RestException
 {
-    public TooManyRequestsExceptions()
-        : base(nameof(AppStrings.TooManyRequestsExceptions))
-    {
-    }
 
     public TooManyRequestsExceptions(string message)
         : base(message)

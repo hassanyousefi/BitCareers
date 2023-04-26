@@ -16,8 +16,6 @@
         <Compile Condition=" '$(BlazorMode)' == 'BlazorWebAssembly' " Include="..\BitCareers.Web\Extensions\HttpRequestExtensions.cs" Link="Extensions\HttpRequestExtensions.cs" />
         <PackageReference Condition=" '$(BlazorMode)' == 'BlazorWebAssembly' " Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.4" />
         <ProjectReference Condition=" '$(BlazorMode)' == 'BlazorWebAssembly' " Include="..\BitCareers.Web\BitCareers.Web.csproj" />
-        
-        <EmbeddedResource Include="Resources\*.cshtml" />
         <PackageReference Include="AutoMapper" Version="12.0.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
         <PackageReference Include="Bit.CodeAnalyzers" Version="4.9.9">
@@ -67,9 +65,7 @@
         <Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
         <Using Include="AutoMapper" />
         <Using Include="AutoMapper.QueryableExtensions" />
-        <Using Include="BitCareers.Api.Data" />
         <Using Include="BitCareers.Shared.Enums" />
-        <Using Include="BitCareers.Api.Services.Contracts" />
     </ItemGroup>
 
     <ItemGroup>
@@ -80,23 +76,6 @@
         <None Update="IdentityCertificate.pfx">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <Compile Update="**\*.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer','')).resx</DependentUpon>
-        </Compile>
-        <EmbeddedResource Update="**\*.resx">
-            <Generator>PublicResXFileCodeGenerator</Generator>
-            <LastGenOutput>%(Filename).Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="Mappers\" />
     </ItemGroup>
 
 </Project>

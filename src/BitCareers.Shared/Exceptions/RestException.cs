@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class RestException : KnownException
 {
-    public RestException()
-        : base(nameof(AppStrings.RestException))
-    {
-    }
-
     public RestException(string message)
         : base(message)
     {

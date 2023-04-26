@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class ConflictException : RestException
 {
-    public ConflictException()
-        : this(nameof(AppStrings.ConflicException))
-    {
-    }
-
     public ConflictException(string message)
         : base(message)
     {

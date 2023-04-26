@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class ForbiddenException : RestException
 {
-    public ForbiddenException()
-        : base(nameof(AppStrings.ForbiddenException))
-    {
-    }
-
     public ForbiddenException(string message)
         : base(message)
     {

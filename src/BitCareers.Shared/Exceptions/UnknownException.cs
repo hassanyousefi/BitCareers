@@ -5,11 +5,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class UnknownException : ApplicationException
 {
-    public UnknownException()
-        : base(nameof(AppStrings.UnknownException))
-    {
-    }
-
     public UnknownException(string message)
         : base(message)
     {

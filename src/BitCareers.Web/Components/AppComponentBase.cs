@@ -15,8 +15,6 @@ public partial class AppComponentBase : ComponentBase
     [AutoInject] protected NavigationManager NavigationManager = default!;
     
     [AutoInject] protected IAuthTokenProvider AuthTokenProvider = default!;
-
-    [AutoInject] protected IStringLocalizer<AppStrings> Localizer = default!;
     
     [AutoInject] protected IExceptionHandler ExceptionHandler { get; set; } = default!;
     

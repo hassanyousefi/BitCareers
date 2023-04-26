@@ -21,11 +21,6 @@ public partial class AppHttpClientHandler : HttpClientHandler
 
         var response = await base.SendAsync(request, cancellationToken);
 
-        if (response.StatusCode is HttpStatusCode.Unauthorized)
-        {
-            throw new UnauthorizedException();
-        }
-
         if (response.IsSuccessStatusCode is false && response.Content.Headers.ContentType?.MediaType?.Contains("application/json", StringComparison.InvariantCultureIgnoreCase) is true)
         {
             if (response.Headers.TryGetValues("Request-ID", out IEnumerable<string>? values) && values is not null && values.Any())

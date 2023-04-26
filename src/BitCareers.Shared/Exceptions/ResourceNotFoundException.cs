@@ -6,11 +6,6 @@ namespace BitCareers.Shared.Exceptions;
 [Serializable]
 public class ResourceNotFoundException : RestException
 {
-    public ResourceNotFoundException()
-        : base(nameof(AppStrings.ResourceNotFoundException))
-    {
-    }
-
     public ResourceNotFoundException(string message)
         : base(message)
     {
